@@ -36,6 +36,8 @@ https://pt.wikipedia.org/wiki/6502
 
 https://github.com/davepoo/6502Emulator
 
+https://www.nesdev.org/obelisk-6502-guide/addressing.html
+
 https://www.youtube.com/watch?v=qJgsuQoy9bc&t=131
 
 https://www.youtube.com/watch?v=7WuRq-Wmw5o
