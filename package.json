@@ -1,0 +1,24 @@
+{
+  "name": "6502_cpu_emulated_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexcastroDev/6502_cpu_emulated_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexcastroDev/6502_cpu_emulated_js/issues"
+  },
+  "homepage": "https://github.com/AlexcastroDev/6502_cpu_emulated_js#readme"
+}
