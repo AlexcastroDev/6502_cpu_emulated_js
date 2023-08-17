@@ -50,6 +50,12 @@ export default class CPU {
         return data
     }
 
+    readByte(address) {
+        const data = this.Memory.Byte[address]
+        this.Cycles--
+        return data
+    }
+
     ldaSetStatus() {
         // Set if A is zero
         this.Z = this.A === 0x00 ? 1 : 0
@@ -68,7 +74,7 @@ export default class CPU {
                 break;
                 case instructions.LDA_INST_ZP.opcode:
                     const ZeroPageAddress = this.fetchByte()
-                    this.A = this.operator(ZeroPageAddress)
+                    this.A = this.readByte(ZeroPageAddress)
                     this.ldaSetStatus()
                 break;
                 default:

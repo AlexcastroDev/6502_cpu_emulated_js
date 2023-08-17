@@ -39,14 +39,14 @@ test('Should Check execute - LDA_INST_IM', t => {
 })
 
 // TODO: NOT WORKING YET
-// test('Should Check execute - LDA_INST_ZP', t => {
-//     const cpu = new CPU(new Memory())
-    
-//     cpu.Memory.Byte[0xFFFC] = instructions.LDA_INST_ZP.opcode
-//     cpu.Memory.Byte[0xFFFD] = 0x42
-//     cpu.Memory.Byte[0x0042] = 0x84
+test('Should Check execute - LDA_INST_ZP', t => {
+    const cpu = new CPU(new Memory())
 
-//     cpu.execute(instructions.LDA_INST_ZP.cycles)
+    cpu.Memory.Byte[0xFFFC] = instructions.LDA_INST_ZP.opcode
+    cpu.Memory.Byte[0xFFFD] = 0x42
+    cpu.Memory.Byte[0x0042] = 0x84
 
-//     strictEqual(cpu.A === 0x84, true)
-// })
+    cpu.execute(3)
+
+    strictEqual(cpu.A === 0x84, true)
+})
