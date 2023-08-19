@@ -1,5 +1,14 @@
 const instructions = {
     // LDA immediate mode -- addressing mode #1
+    // An instruction using immediate addressing mode has
+    // constant value or the address of the operand as part of the instruction.
+    // For example, the instruction LDA #$01 would load the accumulator with
+    // the value hex 01 (decimal 1). Likewise LDA #$FF would load the accumulator
+    // with the value hex FF (decimal -1).
+    // An assembler will always generate the shortest form of immediate mode
+    // (e.g. LDA #$01) even if the operand can be expressed as a larger number
+    // (e.g. LDA #$0001). The reason for this is that the 6502 processor only
+    // supports 8 bit immediate mode so the assembler is just being safe.
     LDA_INST_IM: {
         cycles: 2,
         opcode: 0xA9,
