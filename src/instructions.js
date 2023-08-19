@@ -41,6 +41,7 @@ const instructions = {
     // the instruction supports the mode (not all do).
     LDA_INST_ZPX: {
         cycles: 4,
+        opcode: 0xB5, // 181
     },
     // LDA absolute -- addressing mode #4
     LDA_INST_ABS: {
