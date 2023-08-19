@@ -38,7 +38,6 @@ test('Should Check execute - LDA_INST_IM', t => {
     strictEqual(cpu.A === 0x42, true)
 })
 
-// TODO: NOT WORKING YET
 test('Should Check execute - LDA_INST_ZP', t => {
     const cpu = new CPU(new Memory())
 
@@ -46,7 +45,7 @@ test('Should Check execute - LDA_INST_ZP', t => {
     cpu.Memory.Byte[0xFFFD] = 0x42
     cpu.Memory.Byte[0x0042] = 0x84
 
-    cpu.execute(3)
+    cpu.execute(instructions.LDA_INST_ZP.cycles)
 
     strictEqual(cpu.A === 0x84, true)
 })

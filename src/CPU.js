@@ -77,6 +77,11 @@ export default class CPU {
                     this.A = this.readByte(ZeroPageAddress)
                     this.ldaSetStatus()
                 break;
+                case instructions.LDA_INST_ZPX.opcode:
+                    const ZeroPageAddressX = this.fetchByte() + this.X
+                    this.A = this.readByte(ZeroPageAddressX)
+                    this.ldaSetStatus()
+                break;
                 default:
                     throw new Error(`Instruction not found: ${Instruction}`)
             }
